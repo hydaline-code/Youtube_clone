@@ -1,5 +1,3 @@
-//import React from 'react'
-//import { tag } from 'fontawesome'
 import PropTypes from 'prop-types'
 import '../styles/Buttontag.css'
 

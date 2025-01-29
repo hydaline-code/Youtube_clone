@@ -1,9 +1,7 @@
-//import React from 'react'
 import '../styles/LayoutHeader.css'
 import ButtonTag from '../components/ButtonTag'
 import { generateCustomYouTubeCards } from '../utils/mockData';
-//import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export default function LayoutHeader() {
   

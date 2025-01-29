@@ -63,23 +63,6 @@ export default function Layout({youtubecards, youtubeshorts, inputtext, setSelec
       </div>
 </div>
 
-      {/* <div className="video-grid">
-        {secondHalfCards.map((card) => (
-          <div
-            key={card.id}
-            onClick={() => setSelectedVideo(card)}
-            className={`card-container ${
-              inputtext &&  
-              card.category.toLowerCase().includes(inputtext.toLowerCase())
-                ? 'filtered-card'
-                : ''
-            }`}
-          >
-            <Card card={card} />
-          </div>
-        ))}
-      </div> */}
-
 <div className="video-grid">
   {secondHalfCards.map((card) => (
     <div

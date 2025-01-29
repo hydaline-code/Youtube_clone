@@ -1,8 +1,6 @@
-//import React from 'react'
 import propTypes from 'prop-types';
 import '../styles/sidebarbtn.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 export default function SidebarButton({ label, icon, subcategories, className }) {
 

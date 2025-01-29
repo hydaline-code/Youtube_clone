@@ -1,12 +1,8 @@
-//import React from 'react'
 import Header from '../components/Header'
 import propTypes from 'prop-types';
-//import Layout from '../components/Layout'
 import '../styles/detailpage.css'
 import { faArrowCircleLeft, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
 
 export default function DetailPage({video, setSelectedVideo }) {
   return (

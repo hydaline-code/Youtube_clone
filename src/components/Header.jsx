@@ -5,20 +5,11 @@ import { faBars, faSearch, faMicrophone,faUser, faAdd } from '@fortawesome/free-
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import '../styles/Header.css';
 
-
 export default function Header({onfilter,inputtext, handleEdit}) {
-
-  //const [inputtext, setInputText] = useState('');
-
-
-  // function handleEdit(event) {
-  //   const inputValue = event.target.value;
-  //   setinputtext(inputValue);   // Update the state
-  // }
 
  function handleSearch() {
   onfilter(inputtext); 
-  //setinputtext('');
+ 
  }
 
   return (

@@ -1,4 +1,3 @@
-//import React from 'react'
 import '../styles/Shorts.css'
 import propTypes from 'prop-types';
 import {faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';

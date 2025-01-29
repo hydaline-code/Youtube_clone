@@ -10,12 +10,10 @@ export default function HomePage({setSelectedVideo}) {
 
   function handleEdit(event) {
     const inputValue = event.target.value;
-    setInputText(inputValue);   // Update the state
+    setInputText(inputValue);  // Update the state
   }
 
   const cards = useMemo(()=> generateCustomYouTubeCards(8), []);
- // const cards = generateCustomYouTubeCards(8);
-  //console.log(cards);
   const shorts = youtubeShortData(5);
 
   const [filteredCards, setFilteredCards] = useState(cards);
