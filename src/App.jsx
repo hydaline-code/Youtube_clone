@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './index.css'
 import HomePage from './pages/HomePage'
 import DetailPage from './pages/DetailPage'

@@ -1,12 +1,12 @@
-import React from 'react';
 import logo from '../assets/YouTube_2024.svg';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch, faMicrophone,faUser, faAdd } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import '../styles/Header.css';
 
 
-export default function Header({onfilter,inputtext, handleEdit, setinputtext}) {
+export default function Header({onfilter,inputtext, handleEdit}) {
 
   //const [inputtext, setInputText] = useState('');
 
@@ -68,3 +68,8 @@ export default function Header({onfilter,inputtext, handleEdit, setinputtext}) {
   )
 }
 
+Header.propTypes = {
+  onfilter: PropTypes.func.isRequired,
+  inputtext: PropTypes.string.isRequired,
+  handleEdit: PropTypes.func.isRequired,
+}

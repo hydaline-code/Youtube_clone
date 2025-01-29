@@ -1,4 +1,4 @@
-import React from 'react'
+import propTypes from 'prop-types';
 import '../styles/card.css'
 import {faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -40,4 +40,14 @@ return (
 }
 
 
-
+Card.propTypes ={
+  card: propTypes.shape({
+    id: propTypes.oneOfType([propTypes.string, propTypes.number]).isRequired,
+    title: propTypes.string.isRequired,
+    channelName: propTypes.string.isRequired,
+    thumbnail: propTypes.string.isRequired,
+    views: propTypes.number.isRequired,
+    uploadedAt: propTypes.string.isRequired,
+  }).isRequired,
+  className: propTypes.string,
+}

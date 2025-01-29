@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
+import propTypes from 'prop-types'
 import Header from '../components/Header'
 import HomeContent from '../components/HomeContent'
 import { youtubeShortData } from '../utils/Shorts.js'
@@ -40,3 +41,7 @@ export default function HomePage({setSelectedVideo}) {
     </main>
   )
 }
+
+HomePage.propTypes={
+  setSelectedVideo:propTypes.func.isRequired,
+};

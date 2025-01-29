@@ -1,4 +1,6 @@
-import React from 'react'
+//import React from 'react'
+//import { tag } from 'fontawesome'
+import PropTypes from 'prop-types'
 import '../styles/Buttontag.css'
 
 export default function ButtonTag({tag, className}) {
@@ -9,4 +11,11 @@ export default function ButtonTag({tag, className}) {
         </button>
     </div>
   )
+}
+
+ButtonTag.propTypes={
+  tag: PropTypes.shape({
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+  className: PropTypes.string,
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import propTypes from 'prop-types'
 import '../styles/Layout.css'
 import LayoutHeader from './LayoutHeader'
 import Card from './Card.jsx'
@@ -108,4 +108,11 @@ export default function Layout({youtubecards, youtubeshorts, inputtext, setSelec
 </div>
     </section>
   )
+}
+
+Layout.propTypes = {
+  inputtext: propTypes.string.isRequired,
+  youtubecards: propTypes.array.isRequired,
+  youtubeshorts: propTypes.array.isRequired,
+  setSelectedVideo: propTypes.func.isRequired,
 }

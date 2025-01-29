@@ -1,13 +1,14 @@
-import React from 'react'
+//import React from 'react'
 import Header from '../components/Header'
-import Layout from '../components/Layout'
+import propTypes from 'prop-types';
+//import Layout from '../components/Layout'
 import '../styles/detailpage.css'
 import { faArrowCircleLeft, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-export default function DetailPage({ video, setSelectedVideo }) {
+export default function DetailPage({video, setSelectedVideo }) {
   return (
     <>
      <Header />
@@ -40,4 +41,9 @@ export default function DetailPage({ video, setSelectedVideo }) {
     </section>
     </>
   );
+}
+
+DetailPage.propTypes ={
+  video: propTypes.object.isReqired,
+  setSelectedVideo:propTypes.func.isRequired,
 }

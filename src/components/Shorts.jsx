@@ -1,6 +1,7 @@
-import React from 'react'
+//import React from 'react'
 import '../styles/Shorts.css'
-import {faEllipsisVertical, faCompass } from '@fortawesome/free-solid-svg-icons';
+import propTypes from 'prop-types';
+import {faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Shorts({shortcard}) {
@@ -25,4 +26,14 @@ export default function Shorts({shortcard}) {
         
     </div>
   )
+}
+
+Shorts.propTypes ={
+  shortcard: propTypes.shape({
+    id: propTypes.oneOfType([propTypes.string, propTypes.number]).isRequired,
+    titre: propTypes.string.isRequired,
+    thumbnail: propTypes.string.isRequired,
+    views: propTypes.number.isRequired,
+
+  }).isRequired,
 }
