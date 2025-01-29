@@ -1,0 +1,26 @@
+header {
+  position: fixed; 
+   top: 0;
+   width: 100vw;
+}
+
+.user {
+    /* border: solid 1px blue; */
+    justify-content: space-around;
+}
+
+.user .btn-create {
+    font-size: 12px;
+}
+
+button .plus-icon {
+    font-size: 12px;
+}
+ 
+ .logo {
+    /* border: solid 1px #000; */
+    width: 22%;
+    height: 20%;
+    margin: 0;
+  }
+  

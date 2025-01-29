@@ -1,0 +1,8 @@
+.layout-header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    scrollbar-width: none;
+    background-color: white;
+}

@@ -1,0 +1,10 @@
+.btn {  
+    max-width: 20vw;
+    font-weight: 550;
+    font-size: 12px;
+}
+
+.btn-all {
+    background-color: black;
+    color: whitesmoke;
+}
