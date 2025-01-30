@@ -6,6 +6,7 @@ import { generateCustomYouTubeCards } from '../utils/mockData';
 export default function LayoutHeader() {
   
 const Tags = generateCustomYouTubeCards(22);
+console.log("ici");
   return (
     <header className='layout-header flex gap-1 items-center'>  
         <div className=" scroll-bar flex gap-2 overflow-x-auto  scrollbar-hide scroll-smooth w-full overflow-hidden">

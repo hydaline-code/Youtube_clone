@@ -5,12 +5,12 @@ import { faBars, faSearch, faMicrophone,faUser, faAdd } from '@fortawesome/free-
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import '../styles/Header.css';
 
-export default function Header({onfilter,inputtext, handleEdit}) {
+export default function Header({inputRef, handleFilter}) {
 
- function handleSearch() {
-  onfilter(inputtext); 
+//  function handleSearch() {
+//   onfilter(inputtext); 
  
- }
+//  }
 
   return (
     <header className="header flex items-center justify-between p-2 pr-4  w-full shadow-md sticky top-0 left-0">
@@ -26,12 +26,11 @@ export default function Header({onfilter,inputtext, handleEdit}) {
     
         <input
           type="text"
-         value={inputtext}
-          onChange={handleEdit}
+          ref= {inputRef}
           placeholder="Search"
           className="flex-grow p-2 border border-gray-300 rounded-l-full  focus:outline-none focus:border-blue-500 shadow-inner "
         />
-        <button onClick={handleSearch} className="px-4 py-2 bg-gray-100 border border-gray-300 rounded-r-full hover:bg-gray-200 w-1/7">
+        <button onClick={handleFilter} className="px-4 py-2 bg-gray-100 border border-gray-300 rounded-r-full hover:bg-gray-200 w-1/7">
           <FontAwesomeIcon icon={faSearch} className="text-gray-500"  />
         </button>
       </div>
