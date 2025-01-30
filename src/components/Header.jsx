@@ -7,11 +7,6 @@ import '../styles/Header.css';
 
 export default function Header({inputRef, handleFilter}) {
 
-//  function handleSearch() {
-//   onfilter(inputtext); 
- 
-//  }
-
   return (
     <header className="header flex items-center justify-between p-2 pr-4  w-full shadow-md sticky top-0 left-0">
 
@@ -59,7 +54,6 @@ export default function Header({inputRef, handleFilter}) {
 }
 
 Header.propTypes = {
-  onfilter: PropTypes.func.isRequired,
-  inputtext: PropTypes.string.isRequired,
+  inputRef: PropTypes.object.isRequired,
   handleEdit: PropTypes.func.isRequired,
 }

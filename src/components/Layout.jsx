@@ -7,9 +7,9 @@ import { faCompass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../styles/card.css';
 
-export default function Layout({youtubecards, youtubeshorts, inputtext, setSelectedVideo}) {
+export default function Layout({youtubecards, youtubeshorts, inputRef, setSelectedVideo}) {
 
-  console.log("Input text:", inputtext);
+  console.log("Input text:", inputRef?.current?.value);
 
   const halfwayIndex = Math.ceil(youtubecards.length / 2);
   const firstHalfCards = youtubecards.slice(0, halfwayIndex);
@@ -25,18 +25,11 @@ export default function Layout({youtubecards, youtubeshorts, inputtext, setSelec
           firstHalfCards.map((card) => (
             <div key={card.id}
             onClick={() => setSelectedVideo(card)}
-            // className={`card-container ${
-            //   inputtext &&
-            //    // Ensure inputtext is not empty or just spaces
-            //   card.category.toLowerCase().includes(inputtext.toLowerCase())
-            //     ? 'filtered-card'
-            //     : ''
-            // }`}>
               className='card-container'>
               <Card card={card}
               className={`${
-                inputtext &&
-                card.category.toLowerCase().includes(inputtext.toLowerCase())
+                inputRef?.current?.value &&
+                card.category.toLowerCase().includes( inputRef?.current?.value.toLowerCase())
                   ? 'search-highlight'
                   : ''}`
                 }
@@ -67,21 +60,12 @@ export default function Layout({youtubecards, youtubeshorts, inputtext, setSelec
   {secondHalfCards.map((card) => (
     <div
       key={card.id}
-      
       onClick={() => setSelectedVideo(card)}
-      className='card-container'
-      // className={`card-container ${
-      //   inputtext &&
-      //   card.category.toLowerCase().includes(inputtext.toLowerCase())
-      //     ? 'filtered-card search-result'
-      //     : ''
-      // }`}
-    >
+      className='card-container'>
       <Card card={card}
-      
         className={`${
-          inputtext &&
-        card.category.toLowerCase().includes(inputtext.toLowerCase())
+          inputRef?.current?.value &&
+        card.category.toLowerCase().includes( inputRef?.current?.value.toLowerCase())
           ? 'search-highlight'
           : ''}`
         }
@@ -94,7 +78,7 @@ export default function Layout({youtubecards, youtubeshorts, inputtext, setSelec
 }
 
 Layout.propTypes = {
-  inputtext: propTypes.string.isRequired,
+  inputRef: propTypes.object.isRequired,
   youtubecards: propTypes.array.isRequired,
   youtubeshorts: propTypes.array.isRequired,
   setSelectedVideo: propTypes.func.isRequired,

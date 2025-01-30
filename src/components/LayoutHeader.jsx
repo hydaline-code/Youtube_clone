@@ -1,12 +1,16 @@
 import '../styles/LayoutHeader.css'
 import ButtonTag from '../components/ButtonTag'
 import { generateCustomYouTubeCards } from '../utils/mockData';
+import { useMemo } from 'react';
 
 
 export default function LayoutHeader() {
   
-const Tags = generateCustomYouTubeCards(22);
+const Tags = useMemo(()=> generateCustomYouTubeCards(22),[]);
+console.log(Tags);
+
 console.log("ici");
+
   return (
     <header className='layout-header flex gap-1 items-center'>  
         <div className=" scroll-bar flex gap-2 overflow-x-auto  scrollbar-hide scroll-smooth w-full overflow-hidden">
