@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import HomeContent from '../components/HomeContent'
 import { youtubeShortData } from '../utils/Shorts.js'
 import { generateCustomYouTubeCards } from '../utils/mockData'
-import TagProvider from '../components/TagContext';
+import TagProvider from '../TagContext';
 
 export default function HomePage({setSelectedVideo}) {
 

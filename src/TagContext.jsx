@@ -1,4 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
+import propTypes from 'prop-types';
 
 const TagContext = createContext(); // Create a context
 
@@ -18,3 +20,6 @@ export default function TagProvider({ children}) { // Provider component
     
 };
 
+TagProvider.propTypes = {
+    children: propTypes.node.isRequired,
+  };

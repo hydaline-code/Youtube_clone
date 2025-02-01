@@ -6,7 +6,7 @@ import Shorts from './Shorts.jsx';
 import { faCompass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/card.css';
-import { useTag } from '../components/TagContext';
+import { useTag } from '../TagContext.jsx';
 
 export default function Layout({ youtubecards, youtubeshorts, inputRef, setSelectedVideo }) {
   const { selectedtag } = useTag();

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import '../styles/Buttontag.css'
-import { useTag } from '../components/TagContext'
+import { useTag } from '../TagContext'
 
 
 export default function ButtonTag({tag, className}) {

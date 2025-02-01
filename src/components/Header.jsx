@@ -54,5 +54,6 @@ export default function Header({inputRef, handleFilter}) {
 }
 
 Header.propTypes = {
-  inputRef: PropTypes.object.isRequired
+  inputRef: PropTypes.object.isRequired,
+  handleFilter: PropTypes.func.isRequired
 }
