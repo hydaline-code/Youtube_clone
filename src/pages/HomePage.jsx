@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import HomeContent from '../components/HomeContent'
 import { youtubeShortData } from '../utils/Shorts.js'
 import { generateCustomYouTubeCards } from '../utils/mockData'
+import TagProvider from '../components/TagContext';
 
 export default function HomePage({setSelectedVideo}) {
 
@@ -32,9 +33,11 @@ export default function HomePage({setSelectedVideo}) {
   };
 
   return (
-    <main >
-        <Header inputRef={inputRef} handleFilter={handleFilter} />
-        <HomeContent filteredCard={filteredCards} shortCard={showShorts} inputRef={inputRef} setSelectedVideo={setSelectedVideo}/>
+    <main>
+      <Header inputRef={inputRef} handleFilter={handleFilter} />
+        <TagProvider>
+          <HomeContent filteredCard={filteredCards} shortCard={showShorts} inputRef={inputRef} setSelectedVideo={setSelectedVideo}/>
+        </TagProvider>
     </main>
   )
 }

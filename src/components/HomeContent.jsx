@@ -5,10 +5,10 @@ import '../styles/Homecontent.css'
 
 export default function HomeContent({filteredCard, shortCard, inputRef, setSelectedVideo}) {
   return (
+
     <section className='container h-screen flex'>
         <Sidebar />
         <Layout youtubecards={filteredCard}  youtubeshorts={shortCard} inputRef={inputRef} setSelectedVideo={setSelectedVideo}/> 
-       
     </section>
   )
 }

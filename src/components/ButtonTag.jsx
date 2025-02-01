@@ -1,10 +1,16 @@
 import PropTypes from 'prop-types'
 import '../styles/Buttontag.css'
+import { useTag } from '../components/TagContext'
 
-export default function ButtonTag({tag, className, handleclick}) {
+
+export default function ButtonTag({tag, className}) {
+
+  const {handleTagClick} = useTag();
+
   return (
     <div>
-        <button onClick={handleclick} className={`btn rounded-md p-1 bg-stone-100  text-sm m-2 text-stone-950 font-sans  ${className}`}>
+        <button  onClick={() => handleTagClick(tag.category)} 
+        className={`btn rounded-md p-1 bg-stone-100  text-sm m-2 text-stone-950 font-sans  ${className}`}>
           {tag.category}
         </button>
     </div>
