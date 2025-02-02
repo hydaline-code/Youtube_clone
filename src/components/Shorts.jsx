@@ -1,5 +1,5 @@
 import '../styles/Shorts.css'
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -28,11 +28,11 @@ export default function Shorts({shortcard}) {
 }
 
 Shorts.propTypes ={
-  shortcard: propTypes.shape({
-    id: propTypes.oneOfType([propTypes.string, propTypes.number]).isRequired,
-    titre: propTypes.string.isRequired,
-    thumbnail: propTypes.string.isRequired,
-    views: propTypes.number.isRequired,
+  shortcard: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    titre: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string.isRequired,
+    views: PropTypes.number.isRequired,
 
   }).isRequired,
 }

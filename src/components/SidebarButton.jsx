@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import '../styles/sidebarbtn.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -28,16 +28,16 @@ export default function SidebarButton({ label, icon, subcategories, className })
 }
 
 SidebarButton.propTypes={
-  id:propTypes.oneOfType([propTypes.string,propTypes.number]).isReqired,
-    label: propTypes.string.isRequired, 
-    icon: propTypes.object.isRequired, 
-    subcategories: propTypes.arrayOf(
-      propTypes.shape({
-        key: propTypes.oneOfType([propTypes.string, propTypes.number]).isRequired,
-        label: propTypes.string.isRequired, 
-        icon: propTypes.object.isRequired, 
+  id:PropTypes.oneOfType([PropTypes.string,PropTypes.number]).isRequired,
+    label: PropTypes.string.isRequired, 
+    icon: PropTypes.object.isRequired, 
+    subcategories: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        label: PropTypes.string.isRequired, 
+        icon: PropTypes.object.isRequired, 
       })
     ),
-    className: propTypes.string, 
+    className: PropTypes.string, 
   };
   

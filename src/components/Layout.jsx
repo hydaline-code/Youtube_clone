@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import '../styles/Layout.css';
 import LayoutHeader from './LayoutHeader';
 import Card from './Card.jsx';
@@ -6,7 +6,7 @@ import Shorts from './Shorts.jsx';
 import { faCompass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/card.css';
-import { useTag } from '../TagContext.jsx';
+import { useTag } from '../TagContext.jsxTagContext';
 
 export default function Layout({ youtubecards, youtubeshorts, inputRef, setSelectedVideo }) {
   const { selectedtag } = useTag();
@@ -78,8 +78,8 @@ export default function Layout({ youtubecards, youtubeshorts, inputRef, setSelec
 
 
 Layout.propTypes = {
-  inputRef: propTypes.object.isRequired,
-  youtubecards: propTypes.array.isRequired,
-  youtubeshorts: propTypes.array.isRequired,
-  setSelectedVideo: propTypes.func.isRequired,
+  inputRef: PropTypes.object.isRequired,
+  youtubecards: PropTypes.array.isRequired,
+  youtubeshorts: PropTypes.array.isRequired,
+  setSelectedVideo: PropTypes.func.isRequired,
 };
