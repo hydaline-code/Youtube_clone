@@ -1,8 +1,8 @@
-
 // /mockData/sidebarMenuData.js
 //import { icon } from '@fortawesome/fontawesome-svg-core';
 import { v4 as uuidv4 } from 'uuid';
-import { faHome, faCompass, faVideo, faHistory, faChevronRight, faFilm, faDownload,faUserCircle, faFire, faMusic, faGamepad,faTrophy,faWifiStrong,faGraduationCap} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCompass, faVideo, faHistory, faChevronRight, faFilm, faDownload,faUserCircle, 
+  faFire, faMusic, faGamepad,faTrophy,faWifiStrong,faGraduationCap} from '@fortawesome/free-solid-svg-icons';
 
 export const sidebarMenuData = [
   {
