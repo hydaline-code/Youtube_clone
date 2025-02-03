@@ -1,0 +1,35 @@
+aside {
+  width: 16vw;
+  position: sticky;
+  overflow: hidden;
+}
+
+aside:hover {
+  scrollbar-width: thin;
+  overflow-y: scroll;
+}
+
+aside hr {
+  width: 130%;
+  margin-left: -1rem;
+}
+
+.sidebar-btn,
+.subcategories-btn {
+  font-size: 12px;
+}
+
+.side-btn {
+  flex-direction: row;
+  padding-right: 2rem;
+  align-items: baseline;
+  width: 10vw;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.side-btn span {
+  left: -1.5rem;
+  position: relative;
+}
