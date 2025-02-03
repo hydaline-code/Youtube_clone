@@ -6,7 +6,7 @@ import Shorts from './Shorts.jsx';
 import { faCompass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/card.css';
-import { useTag } from '../TagContext.jsxTagContext';
+import { useTag } from '../TagContext.jsx';
 
 export default function Layout({ youtubecards, youtubeshorts, inputRef, setSelectedVideo }) {
   const { selectedtag } = useTag();
@@ -14,24 +14,25 @@ export default function Layout({ youtubecards, youtubeshorts, inputRef, setSelec
   const searchText = inputRef?.current?.value?.trim()?.toLowerCase(); // Get the search text from the input element to be used as a filter for the cards
 
   // Combine the filters: selectedtag and searchText
-  let filterTags = selectedtag === 'All' ? youtubecards : youtubecards.filter((card) => card.category === selectedtag); // Apply the selected tag filter and display all cards if the tag is 'All' or the selected tag matches the card's category
+  let filtered = selectedtag === 'All' ? youtubecards : youtubecards.filter((card) => card.category === selectedtag); 
+  // Apply the selected tag filter and display all cards if the tag is 'All' or the selected tag matches the card's category
 
   if (searchText) {
-    filterTags = filterTags.filter((card) =>
+    filtered = filtered.filter((card) =>
       card.category.toLowerCase().includes(searchText) // Apply the search filter
     );
   }
 
   const halfwayIndex = Math.ceil(filterTags.length / 2);
-  const firstHalfCards = filterTags.slice(0, halfwayIndex);
-  const secondHalfCards = filterTags.slice(halfwayIndex);
+  const firstHalfCards = filtered.slice(0, halfwayIndex);
+  const secondHalfCards = filtered.slice(halfwayIndex);
 
   return (
     <section className='layout flex-grow ml-4'>
       <LayoutHeader />
 
       <div className="video-grid">
-        {filterTags.length > 0 ? (
+        {filtered.length > 0 ? (
           firstHalfCards.map((card) => (
             <div key={card.id} onClick={() => setSelectedVideo(card)} className='card-container'>
               <Card
